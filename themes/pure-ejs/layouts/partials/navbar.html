@@ -8,7 +8,7 @@
     </div>
   </a>
   <% siteMeta.pages.forEach(function(page) { %>
-    <% if (page.publish && page.inMenu) { %>
+    <% if (page.publish && page.inMenu && !page.direct) { %>
       <span class="Navbar__Delim">&centerdot;</span>
       <a href="<%= page.url %>">
         <div class="Navbar__Btn">
@@ -26,4 +26,17 @@
       <span>Google</span>
     </div>
   </a>
+  <% siteMeta.pages.forEach(function(page) { %>
+    <% if (page.publish && page.inMenu && page.direct) { %>
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="<%- page.url %>">
+        <div class="Navbar__Btn">
+          <% if (page.iconUrl) { %>
+            <span><img class="inline-img-icon" src="<%= page.iconUrl %>"></span>&nbsp;
+          <% } %>
+          <span><%= page.title %></span>
+        </div>
+      </a>
+    <% } %>
+  <% }) %>
 </nav>
