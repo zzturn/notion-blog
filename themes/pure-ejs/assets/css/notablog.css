@@ -28,7 +28,7 @@ body {
 }
 
 .Navbar.Navbar-Right {
-  margin-left: auto;
+  right: 0;
 }
 
 .Navbar a  {
