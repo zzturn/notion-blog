@@ -27,27 +27,11 @@ body {
   overflow-x: auto;
 }
 
-.Navbar-Right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 16px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 999;
-  width: 100%;
-  height: 50px;
-  padding: 10px 20px;
-  /* Background blur stuff. */
-  background-color: var(--bg-blur);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  overflow-x: auto;
+.Navbar.Navbar-Right {
+  margin-left: auto;
 }
 
-.Navbar a,
-.Navbar-Right a  {
+.Navbar a  {
   color: inherit;
   text-decoration: none;
 }
@@ -57,7 +41,7 @@ body {
   margin-right: 20px;
 }
 
-.Navbar-Right a:last-child > .Navbar__Btn {
+.Navbar-Right a:first-child > .Navbar__Btn {
   /* .nav padding 20px */
   margin-left: 20px;
 }
