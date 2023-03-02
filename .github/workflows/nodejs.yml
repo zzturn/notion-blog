@@ -1,7 +1,10 @@
 name: Node.js Reference Test
 
 on:
-  push:
+  schedule:
+    - cron: '0 23 * * *'    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,3 +20,10 @@ jobs:
           notablog generate .
         env:
           CI: true
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          repository-name: luoxin971/notion-blog
+          branch: doc          
+          folder: public
