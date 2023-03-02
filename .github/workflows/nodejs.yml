@@ -1,6 +1,9 @@
-name: Node.js Reference Test
+name: Generate static pages
 
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: '0 23 * * *'    
   # Allows you to run this workflow manually from the Actions tab
