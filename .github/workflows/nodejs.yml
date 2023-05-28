@@ -27,6 +27,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: luoxin971/notion-blog
+          repository-name: zzturn/notion-blog
           branch: doc          
           folder: public
